@@ -30,7 +30,10 @@
     <main>
       <section class="hero" id="inicio">
         <div class="hero-media">
-          <img src="assets/hero-hair-editorial.png" alt="Modelo con peinado editorial de peluqueria premium">
+          <picture>
+            <source media="(min-width: 48rem)" srcset="assets/hero-hair-editorial-desktop.png">
+            <img src="assets/hero-hair-editorial.png" alt="Modelo con peinado editorial de peluqueria premium">
+          </picture>
         </div>
         <div class="hero-copy">
           <p class="eyebrow">Salon premium</p>
@@ -41,8 +44,12 @@
           <p>Cortes, color y tratamientos con una mirada editorial, precisa y moderna.</p>
           <div class="hero-meta" aria-label="Datos del salon">
             <span>&copy; 2026</span>
-            <span>Experiencia premium</span>
             <span>Buenos Aires</span>
+            <span>Buenos Aires</span>
+            <a class="hero-meta-cta whatsapp-link" href="#" data-message="Hola, quiero reservar un turno.">
+              <span>Reservar turno</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
           </div>
           <div class="hero-actions">
             <a class="button button-dark whatsapp-link" href="#" data-message="Hola, quiero reservar un turno.">
@@ -61,12 +68,30 @@
             <span class="h1-wide">TRANSFORMARTE.</span>
           </h2>
         <ul class="service-list" aria-label="Servicios de peluqueria">
-          <li>Corte</li>
-          <li>Coloración</li>
-          <li>Balayage</li>
-          <li>Tratamientos</li>
-          <li>Peinados</li>
-          <li>Corrección de color</li>
+          <li>
+            <span>Corte</span>
+            <p>Cortes personalizados que resaltan tu estilo y se adaptan a ti.</p>
+          </li>
+          <li>
+            <span>Coloración</span>
+            <p>Color vibrante y duradero con acabados naturales y llenos de brillo.</p>
+          </li>
+          <li>
+            <span>Balayage</span>
+            <p>Mechas suaves y luminosas para un look natural y sofisticado.</p>
+          </li>
+          <li>
+            <span>Tratamientos</span>
+            <p>Nutrición y reparación profunda para un cabello más sano, fuerte y brillante.</p>
+          </li>
+          <li>
+            <span>Peinados</span>
+            <p>Peinados para cada ocasión, desde lo clásico hasta lo más moderno.</p>
+          </li>
+          <li>
+            <span>Corrección de color</span>
+            <p>Reparamos y transformamos tu color para lograr el tono perfecto con seguridad y cuidado.</p>
+          </li>
         </ul>
       </section>
 
@@ -122,25 +147,63 @@
         </div>
       </section>
 
-      <section class="trust" aria-label="Resenas y confianza">
-        <div class="rating">
-          <span>4.9★</span>
-          <p>Resenas de clientas que vuelven por el resultado y la experiencia.</p>
+      <section class="trust" aria-label="Resenas de clientas">
+        <div class="trust-heading">
+          <p class="eyebrow">[Reseñas]</p>
+          <h2>Resultados que se ven.<br>Experiencias que se sienten.</h2>
+          <div class="rating">
+            <span>4.9★</span>
+            <p>Basado en cientos de reseñas reales de clientas que vuelven por el resultado y la experiencia.</p>
+          </div>
         </div>
         <div class="reviews">
-          <blockquote>
-            "Me escucharon, entendieron mi pelo y sali con un color que se ve caro sin sentirse forzado."
-          </blockquote>
-          <blockquote>
-            "El corte mantiene la forma semanas despues. Se nota el nivel de detalle."
-          </blockquote>
+          <article class="review-card review-card-featured">
+            <img src="assets/ChatGPT Image 27 may 2026, 06_14_49 p.m. (1).png" alt="Clienta con balayage y cabello con brillo">
+            <div>
+              <span class="quote-mark" aria-hidden="true">“</span>
+              <blockquote>“Salí enamorada de mi color y del brillo de mi cabello. El equipo es increíblemente profesional y amable.”</blockquote>
+              <p><strong>Valeria R.</strong><span>Balayage &amp; Gloss</span></p>
+            </div>
+          </article>
+          <article class="review-card">
+            <img src="assets/ChatGPT Image 27 may 2026, 06_14_49 p.m. (2).png" alt="Retrato de clienta con corte personalizado">
+            <div class="review-client">
+              <strong>Mariana L.</strong>
+              <span>Corte personalizado</span>
+            </div>
+            <blockquote>“El corte resalta mis facciones y es súper fácil de peinar.”</blockquote>
+          </article>
+          <article class="review-card">
+            <img src="assets/ChatGPT Image 27 may 2026, 06_14_49 p.m. (3).png" alt="Retrato de clienta con tratamiento y corte">
+            <div class="review-client">
+              <strong>Sofía M.</strong>
+              <span>Tratamiento &amp; Corte</span>
+            </div>
+            <blockquote>“Se nota la calidad de los productos y el cuidado en cada detalle.”</blockquote>
+          </article>
+          <article class="review-card">
+            <img src="assets/ChatGPT Image 27 may 2026, 06_14_49 p.m. (4).png" alt="Retrato de clienta con color y balayage">
+            <div class="review-client">
+              <strong>Daniela R.</strong>
+              <span>Color &amp; Balayage</span>
+            </div>
+            <blockquote>“Entendieron exactamente lo que quería. Resultado impecable.”</blockquote>
+          </article>
         </div>
+        <a class="reviews-link" href="#reservar">Ver más reseñas <span aria-hidden="true">→</span></a>
       </section>
 
       <section class="final-cta" id="reservar">
         <p class="eyebrow">Turnos por WhatsApp</p>
         <h2>LISTA PARA TU PR&Oacute;XIMO CAMBIO</h2>
-        <a class="button button-copper whatsapp-link" href="#" data-message="Hola, quiero reservar por WhatsApp mi proximo cambio en Luxe Salon.">Reservar por WhatsApp</a>
+        <div class="final-cta-visual">
+          <img class="final-cta-image" src="assets/scissors.png" alt="" aria-hidden="true">
+        </div>
+        <span class="final-cta-line" aria-hidden="true"></span>
+        <a class="button button-copper whatsapp-link" href="#" data-message="Hola, quiero reservar por WhatsApp mi proximo cambio en Luxe Salon.">
+          <span>Reservar por WhatsApp</span>
+          <span aria-hidden="true">&rarr;</span>
+        </a>
       </section>
     </main>
 
