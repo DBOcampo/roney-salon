@@ -2,6 +2,16 @@ const phoneNumber = "5491168520049";
 const whatsappLinks = document.querySelectorAll(".whatsapp-link");
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileMenu = document.querySelector(".mobile-menu");
+const pageLoader = document.querySelector(".page-loader");
+
+if (pageLoader) {
+  window.addEventListener("load", () => {
+    window.setTimeout(() => {
+      pageLoader.classList.add("is-hidden");
+      pageLoader.addEventListener("transitionend", () => pageLoader.remove(), { once: true });
+    }, 1300);
+  });
+}
 
 whatsappLinks.forEach((link) => {
   const message = link.dataset.message || "Hola, quiero reservar un turno.";
