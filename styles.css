@@ -196,12 +196,14 @@ section {
 }
 
 .brand img {
+  order: 1;
   width: 4.4rem;
   max-height: 3.5rem;
   object-fit: contain;
 }
 
 .brand span {
+  order: 2;
   font-size: var(--brand-size);
   line-height: 1;
   white-space: nowrap;
