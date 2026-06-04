@@ -1335,7 +1335,7 @@ a:focus,
     --desktop-service-copy-line-height: 1.35;
     --work-label-size: 0.72rem;
     --results-eyebrow-size: 1.1rem;
-    --results-title-size: 4.25rem;
+    --results-title-size: 3rem;
     --results-title-line-height: 0.92;
     --desktop-results-grid: minmax(16rem, 0.8fr) minmax(0, 2.4fr);
     --desktop-results-gap: 3rem;
@@ -1403,7 +1403,7 @@ a:focus,
     --desktop-header-text-shadow: 0 1px 16px rgba(58, 43, 36, 0.32);
     --desktop-hero-zoom: 1;
     --desktop-hero-x: 50%;
-    --desktop-hero-y: 50%;
+    --desktop-hero-y: 10%;
     --desktop-hero-actions-top: 58%;
     --desktop-hero-actions-right: 4rem;
     --desktop-hero-eyebrow-left: 4rem;
@@ -1496,8 +1496,9 @@ a:focus,
 
   .hero-actions {
     position: absolute;
-    top: var(--desktop-hero-actions-top);
+    top: auto;
     right: var(--desktop-hero-actions-right);
+    bottom: calc(var(--desktop-hero-copy-bottom) + var(--desktop-hero-copy-padding-bottom) + 9rem);
     margin-top: 0;
     justify-content: flex-end;
   }
@@ -1560,23 +1561,7 @@ a:focus,
   }
 
   .hero-meta-cta {
-    grid-column: 4;
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-evenly;
-    justify-self: end;
-    width: var(--hero-button-width);
-    height: var(--hero-button-height);
-    padding: 0 var(--hero-button-padding-x);
-    border: 1px solid var(--copper-dark);
-    border-radius: 999px;
-    background: var(--copper-dark);
-    color: var(--white);
-    font-size: var(--hero-button-size);
-    font-weight: 400;
-    letter-spacing: 0.04em;
-    text-transform: none;
-    pointer-events: auto;
+    display: none;
   }
 
   .hero-meta-cta span:last-child {
