@@ -677,6 +677,12 @@ blockquote {
   margin-bottom: 1.6rem;
 }
 
+.products-intro {
+  display: grid;
+  gap: 1.5rem;
+  align-content: start;
+}
+
 .products .section-heading::after {
   content: "Seleccionamos productos para sostener el resultado del salon en tu rutina diaria, con cuidado profesional y acabado natural.";
   display: block;
@@ -694,18 +700,28 @@ blockquote {
 .products-link {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
   justify-self: center;
-  gap: 0.55rem;
-  width: fit-content;
+  gap: 0.7rem;
+  width: min(100%, 13.8rem);
+  height: var(--hero-button-height);
   max-width: 100%;
   margin: 1.15rem auto 0;
+  padding: 0 var(--hero-button-padding-x);
+  background: var(--copper-dark);
+  border: 1px solid var(--copper-dark);
+  border-radius: 999px;
+  color: var(--white);
+  font-size: var(--hero-button-size);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+.products-link span {
   color: var(--copper);
-  font-size: var(--trust-link-size);
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  border-bottom: 1px solid rgba(184, 137, 69, 0.46);
-  padding-bottom: 0.45rem;
+  font-size: var(--hero-button-arrow-size);
+  line-height: 1;
 }
 
 .delivery-strip {
@@ -925,14 +941,28 @@ blockquote {
 }
 
 .reviews-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   justify-self: center;
+  gap: 0.7rem;
+  width: min(100%, 12.8rem);
+  height: var(--hero-button-height);
+  padding: 0 var(--hero-button-padding-x);
+  background: var(--copper-dark);
+  border: 1px solid var(--copper-dark);
+  border-radius: 999px;
+  color: var(--white);
+  font-size: var(--hero-button-size);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+.reviews-link span {
   color: var(--copper);
-  font-size: var(--trust-link-size);
-  font-weight: 700;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  border-bottom: 1px solid rgba(184, 137, 69, 0.5);
-  padding-bottom: 0.45rem;
+  font-size: var(--hero-button-arrow-size);
+  line-height: 1;
 }
 
 .final-cta {
@@ -1399,7 +1429,8 @@ a:focus,
     --footer-size: 0.72rem;
     --desktop-page-padding-x: 2rem;
     --desktop-section-padding-y: 5rem;
-    --desktop-header-columns: repeat(4, minmax(0, 1fr));
+    --desktop-header-columns: auto auto auto auto 1fr;
+    --desktop-header-gap: 11rem;
     --desktop-header-text-shadow: 0 1px 16px rgba(58, 43, 36, 0.32);
     --desktop-hero-zoom: 1;
     --desktop-hero-x: 50%;
@@ -1432,6 +1463,7 @@ a:focus,
 
   .site-header {
     grid-template-columns: var(--desktop-header-columns);
+    column-gap: var(--desktop-header-gap);
     color: var(--white);
     padding-inline: var(--desktop-page-padding-x);
     text-shadow: var(--desktop-header-text-shadow);
@@ -1439,7 +1471,7 @@ a:focus,
 
   .brand {
     display: inline-flex;
-    gap: 2rem;
+    gap: 1rem;
     width: auto;
     max-width: none;
   }
@@ -1463,12 +1495,12 @@ a:focus,
   }
 
   .site-nav a {
-    justify-self: center;
+    justify-self: start;
   }
 
   .header-link {
     display: inline;
-    justify-self: end;
+    justify-self: start;
   }
 
   .mobile-menu {
@@ -1702,6 +1734,13 @@ a:focus,
     align-items: start;
   }
 
+  .products-intro {
+    grid-column: 1;
+    display: grid;
+    gap: 1.6rem;
+    align-content: start;
+  }
+
   .products .section-heading::after {
     content: "Productos seleccionados para cuidar, definir y mantener el resultado profesional tambien fuera del salon.";
     max-width: var(--desktop-results-copy-width);
@@ -1739,6 +1778,21 @@ a:focus,
     margin-top: 0.15rem;
   }
 
+  .brand-strip {
+    align-self: start;
+    justify-self: start;
+    width: min(100%, 22.5rem);
+    margin-top: 0;
+  }
+
+  .brand-strip .delivery-logos {
+    grid-template-columns: 1fr;
+  }
+
+  .pickup-strip {
+    align-self: start;
+  }
+
   .delivery-strip {
     grid-template-columns: minmax(12rem, 0.8fr) 1.4fr;
     align-items: center;
@@ -1747,8 +1801,28 @@ a:focus,
     padding: 1.1rem 1.25rem;
   }
 
+  .brand-strip {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+    padding: 1.3rem;
+  }
+
+  .brand-strip p {
+    font-size: 0.9rem;
+    letter-spacing: 0.18em;
+  }
+
   .delivery-logos {
     gap: 0.9rem;
+  }
+
+  .brand-strip .delivery-logos {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+  }
+
+  .brand-strip .delivery-logos img {
+    max-height: 8.75rem;
   }
 
   .result-slide {
