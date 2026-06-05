@@ -1090,6 +1090,7 @@ blockquote {
 .footer-info {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 0.55rem 1rem;
   font-weight: 700;
   text-transform: none;
@@ -1106,11 +1107,16 @@ blockquote {
 }
 
 .footer-social-icon {
-  display: none;
+  display: block;
+  width: 1.1rem;
+  height: 1.1rem;
+  object-fit: contain;
 }
 
 .footer-icon-stack {
-  display: contents;
+  display: inline-grid;
+  align-items: start;
+  gap: 0.35rem;
 }
 
 .footer-block h3 {
@@ -1118,6 +1124,16 @@ blockquote {
   margin: 0;
   color: inherit;
   font-size: inherit;
+  vertical-align: middle;
+}
+
+.footer-info .footer-block:nth-child(2) h3 {
+  display: none;
+}
+
+.footer-info .footer-block:nth-child(2) > div:last-child {
+  display: grid;
+  gap: 0.45rem;
 }
 
 .footer-block h3::after {
@@ -1126,6 +1142,7 @@ blockquote {
 
 .site-footer p {
   margin: 0;
+  align-self: center;
 }
 
 .footer-bottom {
@@ -1274,9 +1291,9 @@ a:focus,
     text-transform: none;
   }
 
-  .footer-block p + p {
-    margin-top: 0.7rem;
-  }
+.footer-block p + p {
+  margin-top: 0.7rem;
+}
 
   .footer-block a {
     border-bottom: 1px solid rgba(226, 170, 95, 0.42);
