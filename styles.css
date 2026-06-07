@@ -1258,7 +1258,7 @@ a:focus,
     display: grid;
     gap: 0.5rem;
     justify-items: start;
-    padding-top: 2rem;
+    padding-top: 0.1rem;
   }
 
   .footer-social-icon {
